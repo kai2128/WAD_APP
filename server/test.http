@@ -1,0 +1,196 @@
+@url=http://localhost:3000
+@json=Content-Type: application/json
+
+# _USER 
+###
+GET {{url}}/user
+
+###
+POST {{url}}/user/login
+{{json}}
+
+{
+    "email": "test5@test.com",
+    "password": "test"
+}
+###
+POST {{url}}/user/register
+{{json}}
+
+{
+    "password": "test",
+    "email": "testasd9@test.com",
+    "username": "teasdst6"
+}
+### checkEmail/:email
+GET {{url}}/user/checkEmail/test6@test.com
+
+### change password
+PUT {{url}}/user/password
+{{json}}
+
+{
+    "uid": "60e876296d6972293023c8e4",
+    "oldPassword": "456",
+    "newPassword": "test"
+}
+
+### check booked tickets
+GET {{url}}/user/bookedTickets/60e876296d6972293023c8e4
+
+### test token should return user details
+GET {{url}}/user/details
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwZTE2OTUxMTM4NDlhNjMwODZjMjI3NSIsImlhdCI6MTYyNTQ5MDcxNH0.ACHUS28j9WPZabguiKSiJ9y-5eQtkhk-Bw5nNHM1w9w
+
+# _CINEMA
+### get all cinema details 
+GET {{url}}/cinema
+
+### about us 
+GET {{url}}/cinema/about
+
+# _MOVIE
+### HOME display movie title and image
+GET {{url}}/movie
+
+### /:title  return a details of movie
+GET {{url}}/movie/details/Black Widow
+
+### return movie on air
+GET {{url}}/movie/available
+
+### /:title  search using title return title and image
+GET {{url}}/movie/search/title here
+
+# _TICKET
+### search ticket page
+GET {{url}}/ticket/search/Black Widow
+
+### ticket location filter
+GET {{url}}/ticket/search/Black Widow/2021-07-11
+
+    # {
+    #   "location": [
+    #     5.413160953499756,
+    #     100.33121830389335
+    #   ],
+    #   "name": "1st Avenue Mall, "
+    # },
+
+### display available time, and allow user to process to select seat
+GET {{url}}/ticket/search/Black Widow/2021-07-11/Sunway Pyramid Mall
+## selected data should save into client app and client choose time, seat until proceed to payment
+#   {
+#       "status": "open",
+#       "_id": "60eac010fa47480eccb73073",
+#       "cinemaName": "Sunway Pyramid Mall",
+#       "theatre": "C",
+#       "movieTitle": "Black Widow",
+#       "date": "2021-07-11T09:55:28.955Z",
+#       "startTime": "6:00",
+#       "endTime": "9:00",
+#       "__v": 0
+#     },
+
+### when pressing buy ticket button in ticket home page,
+GET {{url}}/ticket/search/Black Widow/2021-07-11/Sunway Pyramid Mall/3:00
+
+
+### select seat, after finish select ticket, and succes make payment
+POST  {{url}}/ticket/newTicket
+{{json}}
+
+{
+	"movieTitle":"Black Widow",
+	"userId":"60e876296d6972293023c8e4",
+	"scheduleId":"60eac010fa47480eccb73065",
+	"bankCard":"1234-1234-1234-1234",
+	"ticketSelected":{
+		"Child":5,
+		"Adult":15
+	},
+	"totalPrice":"25",
+	"seatSelected":[
+		"B2",
+		"B4"
+	],
+	"seat":{
+		"A":[
+			1,
+			1,
+			1,
+			1,
+			1,
+			1
+		],
+		"B":[
+			1,
+			0,
+			1,
+			0,
+			1,
+			1,
+			1,
+			1
+		],
+		"C":[
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1
+		],
+		"D":[
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1
+		],
+		"E":[
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1
+		],
+		"F":[
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1
+		],
+		"G":[
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1,
+			1
+		],
+		"H":[
+			1,
+			1,
+			1,
+			1,
+			1,
+			1
+		]
+	}
+}
+###
