@@ -136,7 +136,7 @@ class Index extends Component {
           onPress={() => this.props.navigation.goBack()}
         />
         <VStack space={4} mx={5} position={'relative'}>
-          <Heading size={'md'}>3. Select seats</Heading>
+          <Heading size={'md'}>2. Select seats</Heading>
           {/*seat info*/}
           <VStack space={1}>
             <Text>Total tickets: {ticketDetails.totalTicket} </Text>
