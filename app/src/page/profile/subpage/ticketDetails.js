@@ -26,7 +26,7 @@ class Index extends Component {
     return (
       <>
         <ProfileHeader
-          title={'Ticket History'}
+          title={'View Ticket'}
           onPress={() => this.props.navigation.goBack()}
         />
         <TicketDetails ticketDetails={this.state.ticketDetails} />
