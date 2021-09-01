@@ -47,7 +47,7 @@ class Index extends Component {
         />
         <VStack space={5} flex={1} mb={5}>
           <Heading mx={5} size={'md'}>
-            4. Confirm Ticket Details
+            3. Confirm Ticket Details
           </Heading>
           <TicketDetails ticketDetails={this.state.ticketDetails} />
           <AppButton title={'Proceed to Payment'} onPress={this.goToPayment} />

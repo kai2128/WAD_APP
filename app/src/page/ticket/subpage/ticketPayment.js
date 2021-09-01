@@ -71,7 +71,7 @@ class Index extends Component {
           title={'Payment'}
         />
         <VStack mx={5} flex={1}>
-          <Heading size={'md'}>5. Payment</Heading>
+          <Heading size={'md'}>4. Payment</Heading>
           <KeyboardAvoidingView>
             <ScrollView>
               <View
