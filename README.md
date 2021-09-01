@@ -13,7 +13,7 @@ to export
 To run server,
 1. cd to server
 2. `npm install`
-3. `npm start`
+3. `npm run start`
 
 
 To run app,
