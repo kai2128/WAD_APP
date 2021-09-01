@@ -182,10 +182,10 @@ class Index extends Component {
               <Text fontWeight={700}>Not available</Text>
 
               {this.renderDummySeat('#34d399')}
-              <Text fontWeight={700}>Available</Text>
+              <Text fontWeight={700}>Selected</Text>
 
               {this.renderDummySeat('#fafafa')}
-              <Text fontWeight={700}>Selected</Text>
+              <Text fontWeight={700}>Available</Text>
             </SimpleGrid>
           </VStack>
         </VStack>
