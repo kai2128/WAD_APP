@@ -20,7 +20,7 @@ const {hoursPerDay} = require('./constants');
  * Run this to generate tickets
  */
 (async () => {
-    const howManyDays = 3;             // < change this to make tickets for ? day, ex: 3, make tickets for 3 day after
+    const howManyDays = 7;             // < change this to make tickets for ? day, ex: 3, make tickets for 3 day after
     const currentDate = new Date();
 
     // * Movie search condition
