@@ -41,4 +41,4 @@ To run app,
 3. `npx react-native run-android`
 
 ## Screenshots
-<img src="./.README/launch.png"/> <img src="./.README/login.png"/> <img src="./.README/register.png"/> <img src="./.README/home.png"/> <img src="./.README/ticket2.png"/> <img src="./.README/seat.png"/> <img src="./.README/payment.png"/> <img src="./.README/settings.png"/>
+<img width="250" src="./.README/launch.png"/> <img width="250" src="./.README/login.png"/> <img width="250" src="./.README/register.png"/> <img width="250" src="./.README/home.png"/> <img width="250" src="./.README/ticket2.png"/> <img width="250" src="./.README/seat.png"/> <img width="250" src="./.README/payment.png"/> <img width="250" src="./.README/settings.png"/>
