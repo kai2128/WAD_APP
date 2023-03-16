@@ -1,7 +1,6 @@
 # Overview
 A movie ticket selling app built using react native for learning purpose.
 
-## Techstacj
 ### Frontend
 - React native
 - native base (UI)
